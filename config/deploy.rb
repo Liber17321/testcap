@@ -50,9 +50,10 @@ namespace :deploy do
   desc 'upload assets files to nginx'
   task :upload_assets_files do
     on roles(:app) do
-      execute 'ruby /Users/weldontim/Documents/work_log/client.rb'
+      execute 'ruby /var/apps/testcap/current/app/assets/stylesheets/client.rb'
     end
   end
+
 end
 
 
