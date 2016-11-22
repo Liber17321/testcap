@@ -1,3 +1,13 @@
+set :stage, :staging
+
+set :branch, ENV['REVISION'] || ENV['BRANCH_NAME'] || 'master'
+
+role :web, 'ubuntu@54.223.54.134'
+role :app, 'ubuntu@54.223.54.134'
+role :executor, 'ubuntu@54.223.54.134'
+role :whenever, 'ubuntu@54.223.54.134'
+role :db, 'ubuntu@54.223.54.134', :primary => true
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
